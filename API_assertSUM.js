@@ -98,19 +98,7 @@ var reqGet = https.request(optionsgetEbay, function(res) {
 		ebaylvalue.emit('update');
 		//console.log("printing ebaylvalue-->"+ebaylvalue)
 		var lkey = Object.keys(myJSON)[3];
-		//console.log(myJSON.hasOwnProperty('l'));
-		//assert();
-
-		/* console.log("Printing EBAY l key: "+lkey);
-		//console.log("passed");
-		myassert(lkey,'l','Assertion Failed')
-		 */
-		//assert.equal(lvalue,"43.04",'Assertion failed')
-		//assert.notequal(lvalue,"43.04",'Assertion failed')
-		
-		
-
-
+		  
     });
 
  
@@ -118,7 +106,7 @@ var reqGet = https.request(optionsgetEbay, function(res) {
 
 ebaylvalue.on('update', function () {
 	assignEbay(ebaylvalue.data)
-    //console.log("Printing ebayvalue out--->"+ebaylvalue.data); // HOORAY! THIS WORKS!
+    
 });
 
 reqGet.end();
@@ -151,18 +139,7 @@ var reqGet = https.request(optionsgetPaypal, function(res) {
 		paypallvaue.emit('update');
 		//var lkey=myJSON.l;
 		var lkey = Object.keys(myJSON)[3];
-		//console.log(myJSON.hasOwnProperty('l'));
-		//assert();
-
-		/* console.log("Printing PYPL l key: "+lkey);
-		//console.log("passed");
-		myassert(lkey,'l','Assertion Failed') */
 		
-		//assert.equal(lvalue,"43.04",'Assertion failed')
-		//assert.notequal(lvalue,"43.04",'Assertion failed')
-		
-		
-
 
     });
 
@@ -177,9 +154,7 @@ paypallvaue.on('update', function () {
 	var Sum = (Number(ebayValue)+Number(paypalValue))
 	console.log("Sum:  "+Sum); 
 	myassert(Sum,76.68,'Assertion Failed: Expected Sum-76.68');
-	//myassert((ebayValue+paypalValue),77.11,'Assertion Failed');
-	//myassert((Number(ebayValue)+Number(paypalValue),'77.11','Assertion Failed');
-    //console.log("Printing ebayvalue out--->"+ebaylvalue.data); // HOORAY! THIS WORKS!
+	
 });
  
 reqGet.end();
