@@ -83,14 +83,6 @@ var reqGet = https.request(optionsgetPYPL, function(res) {
 		PYPLlvalue=myJSON.l;
 		
 		console.info("PYPL field l value: "+PYPLlvalue);
-		//console.log("passed");
-		//myassert(lkey,'l','Assertion Failed')
-		
-		//assert.equal(lvalue,"43.04",'Assertion failed')
-		//assert.notequal(lvalue,"43.04",'Assertion failed')
-		
-		
-
 
     });
     } else {
@@ -135,11 +127,6 @@ var reqGet = https.request(optionsgetEBAY, function(res) {
 		console.log("EBAY Field 'l' asserted: "+assertion);
 		EBAYlvalue=myJSON.l;
 		console.info("EBAY field l value: "+EBAYlvalue);
-		//console.log("passed");
-		//myassert(lkey,'l','Assertion Failed')
-		
-		//assert.equal(lvalue,"43.04",'Assertion failed')
-		//assert.notequal(lvalue,"43.04",'Assertion failed')
 		
 		});
 
@@ -182,28 +169,16 @@ var reqGet = https.request(optionsgetPP, function(res) {
 		console.log("PP Field 'l' asserted: "+assertion);
 		var PPlvalue=myJSON.l;
 		console.info("PP field l value: "+PPlvalue);
-		//console.log("passed");
-		//myassert(lkey,'l','Assertion Failed')
-		
-		//assert.equal(lvalue,"43.04",'Assertion failed')
-		//assert.notequal(lvalue,"43.04",'Assertion failed')
-		
+			
 	
     });
 
 		} else {
 			console.log("PP API Response Error: Bad Request")
 		}
-		
-		//assert.equal(lvalue,"43.04",'Assertion failed')
-		//assert.notequal(lvalue,"43.04",'Assertion failed')
-		
+			
 });
 reqGet.end();
-//assert sum of values for field "l"
-/* console.log("Sum: " +SUM);
-		myassert(SUM,"76.95",'Assertion Failed')  */
-
 
 reqGet.on('error', function(e) {
     console.error(e);
